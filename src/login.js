@@ -1,8 +1,8 @@
 window.onload = (event) => {
     const loginForm = document.getElementById('loginForm');
     const loginMessage = document.getElementById('loginMessage');
-    //const registerForm = document.getElementById('resgisterForm');
-    //onst registerMessage = document.getElementById('registerMessage');
+    const registerForm = document.getElementById('resgisterForm');
+    const registerMessage = document.getElementById('registerMessage');
     //const apiUrl = 'https://node-project-ql7a.vercel.app';
 
     loginForm.addEventListener('submit', async function(event){
@@ -43,7 +43,7 @@ window.onload = (event) => {
 
     });
 
-    /* registerForm.addEventListener('submit', async function(event){
+    registerForm.addEventListener('submit', async function(event){
 
         event.preventDefault(); // Prevenir que se envie el formulario de manera tradicional.
 
@@ -52,7 +52,7 @@ window.onload = (event) => {
         const newEmail = document.getElementById('email').value;
 
         try {
-            const response = await fetch(`${apiUrl}/user/register`, {
+            const response = await fetch(`http://localhost:3000/user/register`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -76,5 +76,5 @@ window.onload = (event) => {
             registerMessage.style.color = 'red'
         }
 
-    });*/
+    });
 }; 
