@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NortWind</title>
+    <link rel="stylesheet" href="../style.css">
+    <!--<link rel="stylesheet" href="../../stylesheet/style.css">-->
+    <script src="../src/categories.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Bienvenidos a Northwind</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#employes">Empleados</a></li>
+            <li><a href="./categories.html">Categorias</a></li>
+            <!--<li><a href="../categories/categories.html">Categorias</a></li>-->
+            <li class="close_sesion"><a href="index.html">Cerrar Sesión</a></li>
+            <!--<li class="close_sesion"><a href="../../index.html">Cerrar Sesión</a></li>-->
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Lita de Categorias</h2>
+            <button type="submit" id="createCategories">Crear Categorias</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="categoriesTBody">
+
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>&copy; 2024 Northwind. Todos los derechos reservados.</footer>
+</body>
+</html>
