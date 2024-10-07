@@ -43,7 +43,7 @@ async function loadCategories() {
             const descriptionCell = document.createElement('td');
             descriptionCell.textContent = categorie.description;
 
-            /*const actionCell = document.createElement('td');
+            const actionCell = document.createElement('td');
 
             const modifyButton = document.createElement('button');
             modifyButton.textContent = 'Modificar';
@@ -55,13 +55,13 @@ async function loadCategories() {
             deleteButton.className = 'delete_button';
             deleteButton.onclick = () => deleteCategory(categorie.category_id);
 
-            //actionCell.appendChild(modifyButton);
-            //actionCell.appendChild(deleteButton); */
+            actionCell.appendChild(modifyButton);
+            actionCell.appendChild(deleteButton); 
 
             row.appendChild(idCell);
             row.appendChild(nameCell);
             row.appendChild(descriptionCell);
-            //row.appendChild(actionCell);
+            row.appendChild(actionCell);
 
             tableBody.appendChild(row);
         }); 
@@ -73,9 +73,9 @@ async function loadCategories() {
     
 }
 
-/*async function deleteCategory(id) {
+async function deleteCategory(id) {
     try {
-        const response = await fetch(`${apiUrl}/deleteCategories/${id}`, {
+        const response = await fetch(`http://localhost:3000/deleteCategories/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -96,4 +96,4 @@ async function loadCategories() {
 
 function modifyCategory (id) {
     window.location.href = `updateCategories.html?id=${id}`;
-}*/
+}
