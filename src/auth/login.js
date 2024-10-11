@@ -3,7 +3,7 @@ window.onload = (event) => {
     const loginMessage = document.getElementById('loginMessage');
     const registerForm = document.getElementById('resgisterForm');
     const registerMessage = document.getElementById('registerMessage');
-    const apiUrl = 'https://node-project1-e58o.vercel.app/';
+    const apiUrl = 'https://node-project1-e58o.vercel.app';
 
     loginForm.addEventListener('submit', async function(event){
 

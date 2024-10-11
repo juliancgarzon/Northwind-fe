@@ -11,7 +11,7 @@ window.onload = (event) => {
 
 };
 
-const apiUrl = 'https://node-project1-e58o.vercel.app/';
+const apiUrl = 'https://node-project1-e58o.vercel.app';
 
 async function loadCategories() {
     try {

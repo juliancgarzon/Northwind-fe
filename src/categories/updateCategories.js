@@ -14,7 +14,7 @@ window.onload = async (event) => {
         await updateCategory(idCategory, name.value, description.value);
     });
 };
-const apiUrl = 'https://node-project1-e58o.vercel.app/';
+const apiUrl = 'https://node-project1-e58o.vercel.app';
 
 function getQueryParams(param) {
     const urlParams = new URLSearchParams(window.location.search);
