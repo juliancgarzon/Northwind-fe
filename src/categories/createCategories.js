@@ -1,6 +1,6 @@
 window.onload = (event) => {
 
-    //const apiUrl = 'https://node-project-ql7a.vercel.app';
+    const apiUrl = 'https://node-project1-e58o.vercel.app/';
 
     const categoriesForm = document.getElementById('categoriesForm');
 
@@ -12,8 +12,7 @@ window.onload = (event) => {
         const categoryDescription = document.getElementById('description').value;
 
         try {
-            //const response = await fetch(`${apiUrl}/createCategories`, {
-            const response = await fetch(`http://localhost:3000/createCategories`, {
+            const response = await fetch(`${apiUrl}/createCategories`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

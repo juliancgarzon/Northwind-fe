@@ -1,9 +1,9 @@
 window.onload = (event) => {
-    const loginForm = document.getElementById('loginForm');
+    const loginForm = document.getElementById ('loginForm');
     const loginMessage = document.getElementById('loginMessage');
     const registerForm = document.getElementById('resgisterForm');
     const registerMessage = document.getElementById('registerMessage');
-    //const apiUrl = 'https://node-project-ql7a.vercel.app';
+    const apiUrl = 'https://node-project1-e58o.vercel.app/';
 
     loginForm.addEventListener('submit', async function(event){
 
@@ -13,8 +13,7 @@ window.onload = (event) => {
         const password = document.getElementById('password').value;
 
         try {
-            //const response = await fetch(`${apiUrl}/api/login`, {
-            const response = await fetch(`http://localhost:3000/api/login`, {
+            const response = await fetch(`${apiUrl}/api/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -24,7 +23,6 @@ window.onload = (event) => {
 
             const data = await response.json();
             console.log(data);
-            //const encodeData = btoa(data);
             const encodeData = btoa(JSON.stringify(data));
             console.log(encodeData);
 
@@ -53,7 +51,7 @@ window.onload = (event) => {
         const newEmail = document.getElementById('email').value;
 
         try {
-            const response = await fetch(`http://localhost:3000/user/register`, {
+            const response = await fetch(`${apiUrl}/user/register`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

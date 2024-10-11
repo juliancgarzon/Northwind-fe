@@ -1,7 +1,5 @@
 window.onload = (event) => {
-    //const encodeData = window.location.hash.substring(1);
-    //const data = JSON.parse(atob(encodeData));
-    //console.log(data);
+    
     const createCategories = document.getElementById('createCategories');
     createCategories.addEventListener('click', function(event){
     
@@ -13,12 +11,11 @@ window.onload = (event) => {
 
 };
 
-//const apiUrl = 'https://node-project-ql7a.vercel.app';
+const apiUrl = 'https://node-project1-e58o.vercel.app/';
 
 async function loadCategories() {
     try {
-        //const response = await fetch(`${apiUrl}/categories`, {
-        const response = await fetch(`http://localhost:3000/categories`, {   
+        const response = await fetch(`${apiUrl}/categories`, {   
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -75,7 +72,7 @@ async function loadCategories() {
 
 async function deleteCategory(id) {
     try {
-        const response = await fetch(`http://localhost:3000/deleteCategories/${id}`, {
+        const response = await fetch(`${apiUrl}/deleteCategories/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
